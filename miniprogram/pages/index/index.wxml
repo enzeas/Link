@@ -1,0 +1,13 @@
+<view class="container">
+  <!--canvas style="width: 750rpx; height: 750rpx;" canvas-id="mapCanvas"></canvas-->
+  <view id="MapContainer" bindtouchstart="touchstartCallback" bindtouchmove="touchmoveCallback" bindtouchend="touchendCallback">
+    <image wx:for="{{mapList}}" class='mapClass' style="{{styleList[index]}}" src="{{item}}" />
+  </view>
+  <view class="userinfo" style="position:absolute;top:600px;">
+    <button open-type="getUserInfo" bindgetuserinfo="onGetUserInfo" class="userinfo-avatar" style="background-image: url({{avatarUrl}})"></button>
+    <view>
+      <text>收藏</text>
+      <text>类型筛选</text>
+    </view>
+  </view>
+</view>
